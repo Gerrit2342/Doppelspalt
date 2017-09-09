@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="scripts.js"></script>
+  <title>Doppelspalt</title>
+</head>
+<body>
+
+
+<canvas id="canvasDoppelspalt" width="500" height="500">
+ANIM
+</canvas>
+
+<script> initializeBoard(); </script>
+
+<div id="rightControl">
+    <div id="wavesSwitch">
+      Wellen
+      <input type="radio" id="wavesSwitchOn" name="wavesOn" value="on" checked>
+        <label for="wavesSwitchOn">An</label>
+      <input type="radio" id="wavesSwitchOff" name="wavesOn" value="off">
+        <label for="wavesSwitchOff">Aus</label>
+    </div>
+
+
+	<div class="spacer" id="spacerWavesLaser"></div>
+
+
+	<div id="laserSwitch">
+		<div id="switchLaser1">
+			<fieldset id="laser1Fieldset">
+			<legend>Laser 1</legend>
+				<input type="radio" id="laser1state" name="laser1power" value="on" checked>
+					<label for="laser1state">An</label> <br>
+				<input type="radio" id="laser1state" name="laser1power" value="off">
+					<label for="laser1state">Aus</label>
+			</fieldset>
+
+		</div>
+
+		<div id="switchLaser2">
+			<fieldset id="laser2Fieldset">
+			<legend>Laser 2</legend>
+				<input type="radio" id="laser2state" name="laser2power" value="on" >
+					<label for="laser2state">An</label> <br>
+				<input type="radio" id="laser1off" name="laser2power" value="off" checked>
+					<label for="laste2state">Aus</label>
+			</fieldset>
+		</div>
+
+		<div id="switchLaser3">
+			<fieldset id="laser3Fieldset">
+			<legend>Laser 3</legend>
+				<input type="radio" id="laser3state" name="laser3power" value="on" checked>
+					<label for="laser3state">An</label> <br>
+				<input type="radio" id="laser1off" name="laser3power" value="off" checked>
+					<label for="laser3state">Aus</label>
+			</fieldset>
+		</div>
+	</div>
+
+
+
+	<div class="spacer" id="spacerLaserWavelenght"></div>
+
+
+	<div id="fieldWavelenght">
+		<fieldset>
+		<legend>
+        <select id="laserSelect">
+          <option value="laser1">Laser 1</option>
+          <option value="laser2">Laser 2</option>
+          <option value="laser3">Laser 3</option>
+        </select>
+      </legend>
+
+		<div id="wavelenghtControlDiv">
+			<label id="wavelenghtLabel" for="wavelenghtSlider" >Wellenlänge:</label>
+			<span id="wavelenghtminLabel">400</span><input id="wavelenghtSlider" oninput="setWavelenght(this)" type="range" min="400" max="800" value="560"><span id="wavelenghtmaxLabel">800</span>
+			<output id="wavelenghtOutput" for="wavelenghtSlider" >560 nm </output>
+		</div>
+			</fieldset>
+		</div>
+
+
+	<div class="spacer" id="spacerWavelenghtGapwidth"></div>
+
+
+	<div id="gapwidthControlDiv">
+       <label id="gapwidthLabel" for="gapwidthSlider">Spaltabstand:</label>
+       <span id="gapwidthMinLabel">1</span><input id="gapwidthSlider" oninput="setGapwidth(this)" type="range" min="1" max="1000" value="600"><span id="gapwidthMaxLabel">800</span>
+       <output id="gapwidthOutput" for="gapwidthSlider" >600 nm </output>
+	</div>
+
+
+	<div class="spacer" id="spacerGapwidthScreendistance"></div>
+
+
+	<div id="distanceControlDiv">
+       <label id="distanceLabel" for="distanceSlider">Schirmabstand:</label>
+       <span id="distanceMinLabel">1</span><input id="distanceSlider" oninput="setDistance(this)" type="range" min="100" max="500" value="200"><span id="distanceMaxLabel">5</span>
+       <output id="distanceOutput" for="distanceSlider" >2.0 m </output>
+    </div>
+
+    <div class="spacer" id="spacerEnd"></div>
+
+</div>
+
+<div id="bottomControl">
+
+    <div id="timeControlDiv">
+		<label id="timeSliderLabel" for="timeSlider">Zeit:</label>
+		<span id="timeMinLabel">0</span><input id="timeSlider" oninput="setTime(this)" type="range" min="0" max="10" value="3"><span id="timeMaxLabel">10</span>
+		<output id="timeOutput" for="timeSlider">3</output>
+	</div>
+
+	<div id="intensityButtonDiv">
+	<button type="button" onclick="openIntensityWindow()" id="intensityButton">Intensitätsverteilung</button>
+	</div>
+
+  </div>
+
+
+
+</body>
+</html>

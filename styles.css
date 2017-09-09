@@ -1,0 +1,327 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+
+  font-family: DejaVu Sans, Verdana ,sans-serif;
+}
+
+
+#canvasDoppelspalt {
+flex: 1 1 100;
+
+}
+
+
+#rightControl{
+	flex: 1 1 0%;
+	max-width: 40%;
+	min-width: 30%;
+
+	display: grid;
+	grid-columns: 100%;
+	grid-rows: auto;
+	align-items: center;
+	justify-items: center;
+	
+}
+
+.spacer {
+	height: 1.9em;
+	width: 2.0em;
+}
+
+#wavesSwitch {
+  flex: 1 1 100%;
+  width: 100%;
+
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+}
+
+#spacerWavesLaser {
+grid-row: 2;
+}
+
+#laserSwitch {
+  flex: 1 1 100%;
+  width: 100%;
+
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: center;
+  
+  display: grid;
+  grid-rows: auto;
+  align-items: center;
+}
+
+#switchLaser1 {
+
+  grid-column: 1;
+
+}
+
+#switchLaser2 {
+
+  grid-column: 2;
+
+}
+
+
+#switchLaser3 {
+
+  grid-column: 3;
+ 
+
+}
+
+#fs1 {
+	border-style: solid;
+}
+
+#spacerLaserWavelenght {
+  grid-row: 4;
+}
+
+#fieldWavelenght {
+  width: 100%;
+  min-width: 280px;
+}
+
+#wavelenghtControlDiv {
+  flex: 1 1 100%;
+
+  width: 100%;
+  min-width: inherit;
+
+  grid-column: 1;
+  grid-row: 5;
+
+  display: grid;
+  grid-rows: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+  #wavelenghtLabel {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: flex-start;
+  }
+
+  #wavelenghtSlider {
+    width: 70%;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #wavelenghtminLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-start;
+
+  }
+
+  #wavelenghtmaxLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-end;
+
+  }
+
+  #wavelenghtOutput {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    text-decoration: underline black;
+
+  }
+
+
+
+
+#spacerWavelenghtGapwidth {
+  grid-row: 6;
+}
+
+#gapwidthControlDiv {
+  flex: 1 1 100%;
+
+  width: 100%;
+  min-width: inherit;
+
+  grid-column: 1;
+  grid-row: 7;
+
+  display: grid;
+  grid-rows: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+  #gapwidthLabel {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: flex-start;
+  }
+
+  #gapwidthSlider {
+    width: 80%;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #gapwidthMinLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-start;
+
+  }
+
+  #gapwidthMaxLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-end;
+
+  }
+
+  #gapwidthOutput {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    text-decoration: underline black;
+  }
+  
+  
+  #spacerGapwidthScreendistance {
+  grid-row: 8;
+}
+
+
+#distanceControlDiv {
+  flex: 1 1 100%;
+
+  width: 100%;
+  min-width: inherit;
+
+  grid-column: 1;
+  grid-row: 9;
+
+  display: grid;
+  grid-rows: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+  #distanceLabel {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: flex-start;
+  }
+
+  #distanceSlider {
+    width: 80%;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #distanceMinLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-start;
+
+  }
+
+  #distanceMaxLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-end;
+
+  }
+
+  #distanceOutput {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    text-decoration: underline black;
+  }
+  
+  #spacerEnd {
+  grid-row: 12;
+	}
+
+
+
+
+
+
+/*---------------------*/
+#bottomControl{
+	flex: 1 1 100%;
+
+	display: grid;
+	grid-rows: auto;
+	grid-columns: auto;
+	justify-items: center;
+}
+
+#timeControlDiv {
+	flex: 1 1 70%;
+	grid-column: 1;
+	width:90%;
+
+	display: grid;
+	grid-rows: auto;
+	align-items: center;
+	justify-items: center;
+	justify-self: flex-start;
+}
+
+  #timeSliderLabel {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: flex-start;
+  }
+
+  #timeSlider {
+
+    grid-column: 1;
+    grid-row: 2;
+	width:90%;
+  }
+
+  #timeMinLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-start;
+
+  }
+
+  #timeMaxLabel {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: flex-end;
+
+  }
+
+  #timeOutput {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    text-decoration: underline black;
+  }
+
+
+#intensityButtonDiv {
+	flex: 1 1 100%;
+	grid-column: 2;
+	justify-self: flex-start;
+}
+
+#intensityButton {
+
+	height: 40px;
+	font-size: 14px;
+	justify-self: flex-start;
+}
